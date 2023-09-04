@@ -28,7 +28,7 @@ jobs:
           components: rustfmt, clippy
       - name: Install Trunk 🧳
         run: |
-          wget -qO- https://github.com/thedodd/trunk/releases/download/${VERSION}/trunk-x86_64-unknown-linux-gnu.tar.gz | tar -xzf-
+          cargo install --locked trunk
       - name: Build with Trunk 🏗️
         run: |
           ~/.cargo/bin/trunk build --release
