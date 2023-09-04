@@ -31,7 +31,7 @@ jobs:
           cargo install --locked trunk
       - name: Build with Trunk 🏗️
         run: |
-          ~/.cargo/bin/trunk build --release
+          trunk build --release
       - name: Deploy to Github Pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
