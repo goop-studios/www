@@ -32,7 +32,7 @@ jobs:
           | tar xz --strip-components 1 -C ~/.cargo/bin
       - name: Build with Trunk 🏗️
         run: |
-          trunk build --release
+          ~/.cargo/bin/trunk build --release
       - name: Deploy to Github Pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
