@@ -43,7 +43,7 @@ jobs:
 
       - name: Build with Trunk 🏗️
         run: |
-          trunk build --release
+          trunk build --public-url goop-studios.github.io --release
 
       - name: Deploy to Github Pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1
