@@ -46,7 +46,7 @@ jobs:
           trunk build --public-url goop-studios.github.io --release
 
       - name: Deploy to Github Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@4.4.3
+        uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
           branch: gh-pages
           folder: dist
