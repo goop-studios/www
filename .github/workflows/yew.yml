@@ -25,28 +25,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v4.0.0
         with:
           persist-credentials: false
 
       - name: Install Rust 🦀
-        uses: actions-rs/toolchain@v1
+        uses: actions-rs/toolchain@v1.0.6
         with:
           toolchain: stable
           target: wasm32-unknown-unknown
           override: true
           components: rustfmt, clippy
 
-      - name: Install Trunk 🧳
-        run: |
-          cargo install --locked trunk
+      - uses: jetli/trunk-action@v0.4.0
+        with:
+          version: 'latest'
 
       - name: Build with Trunk 🏗️
         run: |
           trunk build --public-url goop-studios.github.io --release
 
       - name: Deploy to Github Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+        uses: JamesIves/github-pages-deploy-action@4.4.3
         with:
           branch: gh-pages
           folder: dist
