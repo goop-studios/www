@@ -1,16 +1,25 @@
 ---
 import Layout from '../layouts/Layout.svelte'
+import Footer from '../components/Footer.svelte'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<Layout title="Astro">
-		<h1>Astro</h1>
-	</Layout>
-</html>
+<Layout title="Home" client:load>
+	<header>
+		<h1>Welcome to Goop Studios!</h1>
+	</header>
+	<main>
+		<section>
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos veritatis enim ipsam? In quisquam officia soluta. Unde voluptatum, quae possimus, temporibus nam reiciendis corporis iste expedita accusantium harum veritatis quod consequatur sed officiis cum eaque tempora. Aspernatur voluptates aperiam cum dolore similique, itaque possimus voluptatem rem sapiente amet, ducimus iusto!
+		</section>
+	</main>
+	<footer>
+		<Footer />
+	</footer>
+</Layout>
+
+<style lang="scss">
+	header {
+		@apply flex flex-col items-center justify-center;
+		@apply p-10 bg-green-400 rounded-xl
+	}
+</style>

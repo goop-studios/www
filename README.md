@@ -1,5 +1,9 @@
 # www
 
+
+<img src="./.resources/big_icon_green.svg" align="center"></img>
+
+
 The goop-studios.monster website repo.
 
 Currently using:
@@ -9,6 +13,10 @@ Currently using:
 - [TailwindCSS](https://tailwindcss.com)
 - [SASS](https://sass-lang.com/)
 - [PostCSS](https://postcss.org/)
+
+
+
+
 
 All commands are run from the root of the project, from a terminal:
 

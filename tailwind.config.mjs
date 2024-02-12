@@ -1,8 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}", "./public/**/*", "./public/*"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "sauce": "Sauce Code Pro NFP, monospace",
+        "ubuntu": "Ubuntu NFP, monospace",
+      }
+    },
   },
   plugins: [],
 };
