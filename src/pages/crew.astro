@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.svelte";
+import CrewDisplay from "../components/CrewDisplay.svelte";
+---
+
+<Layout title="Crew">
+    <header>
+        <h1> The Goop Studios Crew </h1>
+    </header>
+    <main>
+        <section>
+            <CrewDisplay />
+        </section>
+    </main>
+    <footer>
+        <p> This is the footer </p>
+    </footer>
+</Layout>
+
+<style lang="scss">
+    section {
+        @apply flex flex-col items-center;
+        @apply gap-5;
+    }
+</style>

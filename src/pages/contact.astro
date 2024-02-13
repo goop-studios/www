@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.svelte";
 import metadata from "../data/metadata.json";
 ---
 
-<Layout title="Contact">
+<Layout title="Contact" client:load>
   <h1>Contact</h1>
   <p>
     You can contact us at <a href=`mailto:${metadata.email}`>{ metadata.email }</a>.

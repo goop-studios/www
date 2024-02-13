@@ -3,19 +3,21 @@
     export let title;
 </script>
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Goop Studios - {title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/svg+xml" href="/favicon_green.svg" />
-    </head>
+<svelte:head>
+    <meta charset="UTF-8" />
+    <title>Goop Studios - {title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon_green.svg" />
+</svelte:head>
 
+<html lang="en">
     <body>
         <Nav fields={['About', 'Crew', 'Contact']} />
         <slot />
     </body>
 </html>
+
+
 
 <style lang="scss">
     @font-face {
@@ -30,5 +32,9 @@
         src:
             local("Ubuntu Nerd Font Propo"),
             url('/fonts/UbuntuNerdFontPropo-Regular.ttf') format("truetype");
+    }
+
+    body {
+        @apply bg-gray-900 text-white font-ubuntu;
     }
 </style>

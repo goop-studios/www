@@ -1,5 +1,7 @@
+const postcssScss = require('postcss-scss');
+
 module.exports = {
-  syntax: "postcss-scss",
+  syntax: postcssScss,
   plugins: {
     tailwindcss: {},
     autoprefixer: {},

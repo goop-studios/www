@@ -1,7 +1,7 @@
 # www
 
 
-<img src="./.resources/big_icon_green.svg" align="center"></img>
+<img src="./.resources/big_icon_green.svg" align="center" alt="Goop Studios Logo"></img>
 
 
 The goop-studios.monster website repo.
