@@ -12,6 +12,7 @@
         <p>
             {body}
         </p>
+    </a>
 </li>
 
 <style lang="scss">
