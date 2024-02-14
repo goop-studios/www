@@ -30,6 +30,15 @@ export default {
         "goop-green": "#2af442",
         "goop-purple": "#e42af4",
       },
+      textDecorationColor: {
+        "goop-green": "#2af442",
+        "goop-purple": "#e42af4",
+        "opacity-0": "rgba(0, 0, 0, 0)",
+        "opacity-100": "rgba(0, 0, 0, 1)",
+      },
+      transitionProperty: {
+        "decoration": "text-decoration-color",
+      },
     },
   },
   plugins: [

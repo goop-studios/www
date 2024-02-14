@@ -30,8 +30,10 @@
             li {
                 @apply my-auto p-4;
                 a {
-                    @apply text-xl hover:text-goop-green text-goop-purple transition-colors;
-                    @apply ease-in-out duration-500;
+                    @apply text-xl;
+                    @apply underline decoration-goop-purple underline-offset-4;
+                    @apply hover:decoration-goop-green;
+                    @apply transition-decoration ease-in-out duration-300;
                 }
             }
             .socials {

@@ -1,25 +1,45 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Footer from '../components/Footer.svelte'
+import Button from '../components/Button.svelte'
+import Card from '../components/Card.svelte'
 ---
 
 <Layout title="Home">
 	<header>
-		<h1>Welcome to Goop Studios!</h1>
+		<h1> Insert Game Logo Here </h1>
 	</header>
 	<main>
-		<section>
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos veritatis enim ipsam? In quisquam officia soluta. Unde voluptatum, quae possimus, temporibus nam reiciendis corporis iste expedita accusantium harum veritatis quod consequatur sed officiis cum eaque tempora. Aspernatur voluptates aperiam cum dolore similique, itaque possimus voluptatem rem sapiente amet, ducimus iusto!
+		<section class="contribute">
+			<Button text="Contribute" href="/contribute" />
+			<Button text="View Source" href="https://github.com/goop-studios/game" />
+		</section>
+		<section class="about">
+			<Card title="About" body="This is a game about stuff and things. It's a work in progress, and we're always looking for contributors." />
+			<Card title="Features" body="This game has a lot of features. It's got a lot of stuff. It's got things. It's got a lot of things." />
 		</section>
 	</main>
-	<footer>
-		<Footer />
-	</footer>
+	<Footer />
 </Layout>
 
 <style lang="scss">
 	header {
-		@apply flex flex-col items-center justify-center;
-		@apply p-10 bg-goop-green rounded-xl text-goop-purple
+		@apply flex flex-col items-center justify-center gap-8;
+		@apply p-52;
+		h1 {
+			@apply text-2xl font-sauce;
+		}
+	}
+	main {
+		@apply flex flex-col items-center justify-center gap-8;
+		section.contribute {
+			@apply flex flex-row items-center justify-center gap-8 drop-shadow-2xl;
+		}
+		section.about {
+			@apply w-1/2 h-3/4 flex-row flex;
+			Card {
+				@apply w-1/4;
+			}
+		}
 	}
 </style>

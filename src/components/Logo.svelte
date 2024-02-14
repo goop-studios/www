@@ -4,8 +4,8 @@
 
 <a href="/">
     <div class="logo-container">
-        <img src="/favicon_green.svg" alt="Logo" class="logo-image" />
-        <img src="/favicon_purple.svg" alt="Logo" class="logo-image" />
+        <img src="/assets/favicon_green.svg" alt="Logo" class="logo-image" />
+        <img src="/assets/favicon_purple.svg" alt="Logo" class="logo-image" />
     </div>
     {text}
 </a>

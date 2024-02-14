@@ -19,8 +19,8 @@
 <ul>
     {#each socials as social}
         <li>
-            <a href={social.url} target="_blank">
-                <span class={getLogo(social.name)}></span>
+            <a aria-label={`${social.name} link`} href={social.url} target="_blank">
+                <span aria-label={`${social.name} logo`} class={getLogo(social.name)}></span>
             </a>
         </li>
     {/each}
@@ -31,8 +31,8 @@
         @apply flex flex-row gap-3;
         li {
             a {
-                @apply hover:text-goop-green text-goop-purple transition-colors;
-                @apply ease-in-out duration-500;
+                @apply text-white hover:text-goop-green transition-colors;
+                @apply ease-in-out duration-300;
                 span {
                     @apply text-2xl;
                 }

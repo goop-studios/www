@@ -1,16 +1,14 @@
 ---
 import Nav from "../components/Nav.svelte";
-export let title = "Home";
+const { title } = Astro.props;
 ---
-
-<head>
-    <meta charset="UTF-8" />
-    <title>Goop Studios - {title}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="/favicon_green.svg" />
-</head>
-
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Goop Studios - {title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/svg+xml" href="/assets/favicon_green.svg" />
+    </head>
     <body>
         <Nav fields={['About', 'Crew', 'Contact']} />
         <slot />
@@ -34,7 +32,7 @@ export let title = "Home";
             url('/fonts/UbuntuNerdFontPropo-Regular.ttf') format("truetype");
     }
 
-    body {
+    * {
         @apply bg-gray-900 text-white font-ubuntu;
     }
 </style>
