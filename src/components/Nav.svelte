@@ -1,6 +1,7 @@
 <script>
     import Logo from "./Logo.svelte";
     import Socials from "./Socials.svelte";
+
     export let logo_text = "Goop Studios"
     export let fields    = []
 

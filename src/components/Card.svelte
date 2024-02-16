@@ -27,8 +27,8 @@
 <style lang="scss">
     li {
         @apply antialiased;
-        @apply bg-gray-700 rounded-2xl p-4 list-none;
-        @apply border border-white w-80 h-80 overflow-auto;
+        @apply bg-gray-700 rounded-2xl p-4 list-none overflow-x-scroll;
+        @apply border border-white w-80 h-80;
         a {
             @apply text-white;
         }
@@ -39,4 +39,25 @@
             @apply text-lg;
         }
     }
+
+    ::-webkit-scrollbar {
+      @apply opacity-0;
+      @apply bg-transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      @apply text-white rounded-xl;
+    }
+    ::-webkit-scrollbar-track {
+      @apply opacity-0;
+    }
+    ::-webkit-scrollbar-button {
+      @apply opacity-0;
+    }
+    ::-webkit-scrollbar-track-piece {
+      @apply opacity-0;
+    }
+    ::-webkit-scrollbar-corner {
+      @apply bg-transparent;
+    }
+
 </style>
