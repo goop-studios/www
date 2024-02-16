@@ -4,10 +4,11 @@
         return field.toLowerCase();
     }
     const logos = {
-        "instagram": "icon-[ri--instagram-line]",
-        "twitter":   "icon-[ri--twitter-x-line]",
-        "github":    "icon-[ri--github-line]",
-        "tiktok":    "icon-[ri--tiktok-line]",
+        "instagram": "icon-[ri--instagram-fill]",
+        "twitter":   "icon-[ri--twitter-x-fill]",
+        "github":    "icon-[ri--github-fill]",
+        "tiktok":    "icon-[ri--tiktok-fill]",
+        "discord":   "icon-[ri--discord-fill]",
     }
 
     function getLogo(social) {

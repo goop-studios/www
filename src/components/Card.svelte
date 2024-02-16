@@ -28,7 +28,7 @@
     li {
         @apply antialiased;
         @apply bg-gray-700 rounded-2xl p-4 list-none;
-        @apply border border-white;
+        @apply border border-white w-80 h-80 overflow-auto;
         a {
             @apply text-white;
         }
