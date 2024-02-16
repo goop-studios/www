@@ -1,8 +1,6 @@
 <script>
     import socials from '../data/socials.json';
-    function lowerCase(field) {
-        return field.toLowerCase();
-    }
+
     const logos = {
         "instagram": "icon-[ri--instagram-fill]",
         "twitter":   "icon-[ri--twitter-x-fill]",
