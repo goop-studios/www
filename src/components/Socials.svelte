@@ -18,7 +18,7 @@
 <ul>
     {#each socials as social}
         <li>
-            <a aria-label={`${social.name} link`} href={social.url} target="_blank">
+            <a aria-label={`${social.name} link`} href={social.url} target="_blank" title={social.name}>
                 <span aria-label={`${social.name} logo`} class={getLogo(social.name)}></span>
             </a>
         </li>

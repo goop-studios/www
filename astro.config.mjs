@@ -25,5 +25,7 @@ export default defineConfig({
     Parser: true
   })],
   output: "server",
-  adapter: cloudflare()
+  adapter: cloudflare({
+    imageService: "passthrough"
+  })
 });

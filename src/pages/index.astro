@@ -3,18 +3,18 @@ import Layout from '../layouts/Layout.astro'
 import Footer from '../components/Footer.svelte'
 import Button from '../components/Button.svelte'
 import Card from '../components/Card.svelte'
-import Logo from '../components/Logo.svelte'
+import GameLogo from '../components/GameLogo.svelte'
 ---
 
 <Layout title="Home">
 	<header>
-		<Logo></Logo>
-	</header>
-	<main>
+		<GameLogo />
 		<section class="contribute">
 			<Button text="Contribute" href="/contribute" />
 			<Button text="View Source" href="https://github.com/goop-studios/game" />
 		</section>
+	</header>
+	<main>
 		<section class="about_section">
 			<ul>
 				<Card title="What is this?" body="This is a future voxel based, roguelike/soulslike open world game. It will be community driven, meaning that the community will be able to contribute to the game." />
@@ -29,21 +29,19 @@ import Logo from '../components/Logo.svelte'
 </Layout>
 
 
-
-
 <style lang="scss">
 	header {
-		@apply flex flex-col items-center justify-center gap-8;
+		@apply flex flex-col items-center justify-center gap-80;
 		@apply p-52;
 		h1 {
 			@apply text-2xl font-sauce;
 		}
+		section.contribute {
+			@apply flex flex-row items-center gap-8 relative;
+		}
 	}
 	main {
 		@apply flex flex-col items-center justify-center gap-8 overflow-hidden;
-		section.contribute {
-			@apply flex flex-row items-center justify-center gap-8;
-		}
 		section.about_section {
 			ul {
 				@apply flex flex-row flex-wrap justify-center gap-8;

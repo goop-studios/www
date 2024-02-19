@@ -1,9 +1,5 @@
 # www
 
-
-<img src="./.resources/big_icon_green.svg" align="center" alt="Goop Studios Logo"></img>
-
-
 The goop-studios.monster website repo.
 
 Currently using:
@@ -28,3 +24,6 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm run preview`         | Preview your build locally, before deploying     |
 | `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm run astro -- --help` | Get help using the Astro CLI                     |
+
+
+![Goop Studios Logo](https://raw.githubusercontent.com/goop-studios/.github/main/resources/big_icon_green.png)
