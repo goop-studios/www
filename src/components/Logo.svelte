@@ -1,8 +1,10 @@
 <script>
+    import { getRelativeLocaleUrl } from "astro:i18n";
+    export let lang = "en";
     export let text = "Goop Studios";
 </script>
 
-<a href="/">
+<a href={getRelativeLocaleUrl(lang, "/")}>
     <div class="logo-container">
         <img src="/assets/favicon_green.svg" alt="Logo" class="logo-image" />
         <img src="/assets/favicon_purple.svg" alt="Logo" class="logo-image" />

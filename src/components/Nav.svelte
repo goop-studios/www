@@ -53,7 +53,7 @@
 <nav>
     <ul>
         <li>
-            <Logo text={logo_text} />
+            <Logo text={logo_text} lang={checkForRouteInUrl()} />
         </li>
          {#each fields as field}
             <li>
