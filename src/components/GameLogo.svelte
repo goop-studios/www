@@ -7,7 +7,7 @@
 
 <style lang="scss">
     a {
-        @apply relative flex gap-2 transition-all;
+        @apply relative flex gap-2 transition-all select-none;
     
         div {
             @apply relative landscape:w-[32rem] portrait:w-80 h-fit;

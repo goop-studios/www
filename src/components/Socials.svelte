@@ -27,13 +27,14 @@
 
 <style lang="scss">
     ul {
-        @apply flex flex-row gap-3 justify-center;
+        @apply flex flex-row gap-3 align-middle h-full w-fit;
         li {
+            @apply h-full flex align-middle;
             a {
-                @apply text-white hover:text-goop-green transition-colors;
+                @apply text-white hover:text-goop-green flex transition-colors justify-center items-center;
                 @apply ease-in-out duration-300;
                 span {
-                    @apply text-2xl;
+                    @apply text-2xl align-middle;
                 }
             }
         }

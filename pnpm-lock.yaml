@@ -1,3 +1,5 @@
+// trunk-ignore-all(checkov)
+
 lockfileVersion: '6.0'
 
 settings:
@@ -40,6 +42,9 @@ dependencies:
     version: 5.3.3
 
 devDependencies:
+  '@iconify-json/circle-flags':
+    specifier: ^1.1.46
+    version: 1.1.46
   '@iconify-json/ri':
     specifier: ^1.1.19
     version: 1.1.19
@@ -59,6 +64,7 @@ devDependencies:
 packages:
 
   /@alloc/quick-lru@5.2.0:
+
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
 
@@ -741,6 +747,12 @@ packages:
   /@iarna/toml@2.2.5:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
     dev: false
+
+  /@iconify-json/circle-flags@1.1.46:
+    resolution: {integrity: sha512-uMCS+CcDIWGq+dHQTDmfOnNX6pwX3/vtX21Ki0T+2uflXTpvYy8xQq4W30rPSiHpH0m6fbkuiHM9i3rx7nSmcQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
 
   /@iconify-json/ri@1.1.19:
     resolution: {integrity: sha512-S9usTucQOY//J3LGIGZ+A6i8AYGCStDcLKjmWzI2UPnWJo+Xd5dESMQGkhOI5BlG3W4AtH6RmiXcpbPy3krmjQ==}

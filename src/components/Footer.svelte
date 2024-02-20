@@ -16,7 +16,7 @@
     footer {
         @apply bg-gray-900 flex flex-row justify-center p-4 mt-auto;
         ul {
-            @apply flex flex-col gap-4;
+            @apply flex flex-col gap-4 justify-center items-center w-full;
             li {
                 @apply my-auto;
                 a {
@@ -34,7 +34,7 @@
                 }
             }
             .socials {
-                @apply landscape:hidden;
+                @apply landscape:hidden w-fit;
             }
         }
     }

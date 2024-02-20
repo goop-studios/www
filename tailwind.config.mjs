@@ -51,9 +51,6 @@ export default {
       transitionProperty: {
         "decoration": "text-decoration-color",
       },
-      MediaDevices: {
-        "tn": "480px",
-      },
     },
   },
   plugins: [

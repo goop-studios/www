@@ -1,28 +1,53 @@
 <script>
     import { getRelativeLocaleUrl } from 'astro:i18n';
-    import Logo from "./Logo.svelte";
-    import Socials from "./Socials.svelte";
+    import Logo from "@components/Logo.svelte";
+    import Socials from "@components/Socials.svelte";
 
-    export let logo_text = "Goop Studios"
-    export let fields    = []
-    export let subfields = {
-        "Crew": ["Oscar Sjödin Jansson", "Odin Larsson", "Liam Sporny", "Sepand Sadraei Javahery"],
+    const routes = {
+        "omoss": "about",
+        "kontakt": "contact"
+    }
+
+    function localeToggle() {
+        const currentLocale = checkForRouteInUrl();
+        return currentLocale === "en" ? "icon-[circle-flags--se]" : "icon-[circle-flags--uk]";
+    }
+
+    function localeRoute() {
+        const currentLocale = checkForRouteInUrl();
+        return currentLocale === "en" ? "/sv" : "/en";
+    }
+
+    function language() {;
+        const currentLocale = checkForRouteInUrl();
+        return currentLocale === "en" ? "Switch to Swedish" : "Byt till Engelska";
     }
 
     function getRoute(field) {
         field = field.replace(/\s/g, '');
         field = field.replace(/ö/g, 'o');
-        return `${lowerCase(field)}`
+        field = field.replace(/ä/g, 'a');
+        field = field.replace(/å/g, 'a');
+        field = field.toLowerCase();
+        if (routes[field]) {
+            return `${routes[field]}`
+        } else {
+            return field;
+        }
     }
  
     function checkForRouteInUrl() {
-        const currentUrl = window.location.href;
+        const currentUrl = window.location.pathname;
         return currentUrl.includes("/en") ? "en" : "sv";
     }
 
-    function lowerCase(field) {
-        return field.toLowerCase();
+    function language_fields() {
+        return checkForRouteInUrl() === "en" ? ["About", "Contact"] : ["Om oss", "Kontakt"];
     }
+
+    export let logo_text = "Goop Studios"
+    export let fields    = language_fields();
+
 </script>
 
 <nav>
@@ -33,15 +58,18 @@
          {#each fields as field}
             <li>
                 <a href={`${getRelativeLocaleUrl(checkForRouteInUrl(), getRoute(field))}`}>{field}</a>
-                {#if subfields[field]}
+                <!--{#if subfields[field]}
                     <ul>
                         {#each subfields[field] as subfield}
                             <li><a href={`${getRelativeLocaleUrl(checkForRouteInUrl(), getRoute(field))}${getRoute(subfield)}`}>{subfield}</a></li>
                         {/each}
                     </ul>
-                {/if}
+                {/if}-->
             </li>
         {/each}
+        <li class="togglelocale">
+            <a title={language()} href={localeRoute()}><span class={localeToggle()}></span></a>
+        </li>
         <li class="socials">
             <Socials />
         </li>
@@ -52,11 +80,11 @@
     nav {
         @apply relative max-w-full z-40;
         ul {
-            @apply flex flex-row gap-5 portrait:justify-evenly portrait:gap-0 drop-shadow-2xl bg-gray-900;
+            @apply flex flex-row gap-5 portrait:justify-evenly portrait:gap-0 drop-shadow-2xl bg-gray-900 align-middle;
             li {
-                @apply my-auto p-4 relative;
+                @apply p-4 text-nowrap relative items-center;
                 a {
-                    @apply text-xl;
+                    @apply text-xl flex text-center h-full items-center;
                     @apply underline decoration-goop-purple underline-offset-4;
                     @apply hover:decoration-goop-green;
                     @apply transition-decoration ease-in-out duration-300;
@@ -72,8 +100,11 @@
                     @apply opacity-100 visible;
                 }
             }
+            .togglelocale {
+                @apply ml-auto;
+            }
             .socials {
-                @apply ml-auto portrait:hidden;
+                @apply portrait:hidden;
             }
         }
     }
