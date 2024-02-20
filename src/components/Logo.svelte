@@ -7,12 +7,12 @@
         <img src="/assets/favicon_green.svg" alt="Logo" class="logo-image" />
         <img src="/assets/favicon_purple.svg" alt="Logo" class="logo-image" />
     </div>
-    {text}
+    <p>{text}</p>
 </a>
 
 <style lang="scss">
     a {
-        @apply relative text-white text-2xl font-sauce flex gap-2 transition-all;
+        @apply relative text-white text-xl font-sauce flex gap-2 transition-all whitespace-nowrap;
     
         div {
             @apply relative w-8 h-8;
@@ -27,6 +27,9 @@
         }
         &:hover img:last-child {
             @apply opacity-0;
+        }
+        p {
+            @apply portrait:hidden landscape:block;
         }
     }
 </style>

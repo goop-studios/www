@@ -1,5 +1,5 @@
 <script>
-    import { get } from "svelte/store";
+    import { getRelativeLocaleUrl } from 'astro:i18n';
     import Logo from "./Logo.svelte";
     import Socials from "./Socials.svelte";
 
@@ -12,7 +12,12 @@
     function getRoute(field) {
         field = field.replace(/\s/g, '');
         field = field.replace(/ö/g, 'o');
-        return `/${lowerCase(field)}`
+        return `${lowerCase(field)}`
+    }
+ 
+    function checkForRouteInUrl() {
+        const currentUrl = window.location.href;
+        return currentUrl.includes("/en") ? "en" : "sv";
     }
 
     function lowerCase(field) {
@@ -27,11 +32,11 @@
         </li>
          {#each fields as field}
             <li>
-                <a href={`/${lowerCase(field)}`}>{field}</a>
+                <a href={`${getRelativeLocaleUrl(checkForRouteInUrl(), getRoute(field))}`}>{field}</a>
                 {#if subfields[field]}
                     <ul>
                         {#each subfields[field] as subfield}
-                            <li><a href={`${getRoute(field)}${getRoute(subfield)}`}>{subfield}</a></li>
+                            <li><a href={`${getRelativeLocaleUrl(checkForRouteInUrl(), getRoute(field))}${getRoute(subfield)}`}>{subfield}</a></li>
                         {/each}
                     </ul>
                 {/if}
@@ -45,9 +50,9 @@
 
 <style lang="scss">
     nav {
-        @apply relative w-full;
+        @apply relative w-screen z-40;
         ul {
-            @apply flex flex-row gap-5 drop-shadow-2xl bg-gray-900;
+            @apply flex flex-row gap-5 portrait:justify-evenly portrait:gap-0 drop-shadow-2xl bg-gray-900;
             li {
                 @apply my-auto p-4 relative;
                 a {
@@ -68,7 +73,7 @@
                 }
             }
             .socials {
-                @apply ml-auto;
+                @apply ml-auto portrait:hidden;
             }
         }
     }

@@ -27,7 +27,7 @@
 
 <style lang="scss">
     ul {
-        @apply flex flex-row gap-3;
+        @apply flex flex-row gap-3 justify-center;
         li {
             a {
                 @apply text-white hover:text-goop-green transition-colors;

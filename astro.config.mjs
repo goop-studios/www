@@ -7,6 +7,20 @@ import compressor from "astro-compressor";
 
 // https://astro.build/config
 export default defineConfig({
+  i18n: {
+    locales: ["en", "sv"],
+    defaultLocale: "en",
+    routing: {
+        prefixDefaultLocale: true
+    },
+    fallback: {
+      sv: "en"
+    }
+  },
+  routing: {
+    extensions: [".astro", ".mdx"],
+    exclude: ["**/node_modules/**", "**/components/**"],
+  },
   integrations: [tailwind({
     configFile: "./tailwind.config.mjs"
   }),

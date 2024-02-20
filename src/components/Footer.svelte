@@ -1,4 +1,5 @@
 <script>
+    import Socials from "@components/Socials.svelte";
     export let text = "Goop Studios";
     export let current_year = new Date().getFullYear();
 </script>
@@ -7,6 +8,7 @@
     <ul>
         <li> {text} &copy; <span class="first"> 2023 </span> - <span class="last"> {current_year} </span> </li>
         <li> This website is <a href="https://github.com/goop-studios/www">open-source</a></li>
+        <li class="socials"> <Socials /> </li>
     </ul>
 </footer>
 
@@ -14,7 +16,7 @@
     footer {
         @apply bg-gray-900 flex flex-row justify-center p-4 mt-auto;
         ul {
-            @apply flex flex-col;
+            @apply flex flex-col gap-4;
             li {
                 @apply my-auto;
                 a {
@@ -30,7 +32,9 @@
                 .last {
                     @apply text-goop-green;
                 }
-
+            }
+            .socials {
+                @apply landscape:hidden;
             }
         }
     }
