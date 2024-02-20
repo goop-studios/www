@@ -11,7 +11,8 @@ export default defineConfig({
     locales: ["en", "sv"],
     defaultLocale: "en",
     routing: {
-        prefixDefaultLocale: true
+        prefixDefaultLocale: true,
+        redirectToDefaultLocale: true
     },
     fallback: {
       sv: "en"
@@ -40,6 +41,7 @@ export default defineConfig({
   })],
   output: "server",
   adapter: cloudflare({
+    mode: "directory",
     imageService: "passthrough"
   })
 });
