@@ -1,6 +1,6 @@
 <script>
-    import crew from "../data/crew.json";
-    import Card from "./Card.svelte";
+    import crew from "@data/crew.json";
+    import Card from "@components/Card.svelte";
 </script>
 
 {#each crew as person}
