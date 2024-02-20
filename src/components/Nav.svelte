@@ -50,7 +50,7 @@
 
 <style lang="scss">
     nav {
-        @apply relative w-screen z-40;
+        @apply relative max-w-full z-40;
         ul {
             @apply flex flex-row gap-5 portrait:justify-evenly portrait:gap-0 drop-shadow-2xl bg-gray-900;
             li {
