@@ -11,8 +11,7 @@ export default defineConfig({
     locales: ["en", "sv"],
     defaultLocale: "en",
     routing: {
-        prefixDefaultLocale: true,
-        redirectToDefaultLocale: true
+        prefixDefaultLocale: false,
     },
     fallback: {
       sv: "en"
@@ -28,7 +27,7 @@ export default defineConfig({
   svelte(),
   compressor({
     gzip: true,
-    brotli: false,
+    brotli: true,
     fileExtensions: [".html", ".js", ".css", ".cjs", ".mjs"]
   }), Compress({
     CSS: true,
@@ -41,7 +40,6 @@ export default defineConfig({
   })],
   output: "server",
   adapter: cloudflare({
-    mode: "directory",
-    imageService: "passthrough"
+    imageService: "cloudflare"
   })
 });

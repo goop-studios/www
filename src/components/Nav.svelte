@@ -15,7 +15,7 @@
 
     function localeRoute() {
         const currentLocale = checkForRouteInUrl();
-        return currentLocale === "en" ? "/sv" : "/en";
+        return currentLocale === "en" ? "/sv" : "/";
     }
 
     function language() {;
@@ -38,7 +38,7 @@
  
     function checkForRouteInUrl() {
         const currentUrl = window.location.pathname;
-        return currentUrl.includes("/en") ? "en" : "sv";
+        return currentUrl === "/" ? "en" : "sv";
     }
 
     function language_fields() {
