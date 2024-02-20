@@ -3,7 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import metadata from "@data/metadata.json";
 ---
 
-<Layout title="Contact">
+<Layout title="Contact" slot="body">
     <h1>Contact</h1>
         <p>
             You can contact us at <a href=`mailto:${metadata.email}`>{ metadata.email }</a>.

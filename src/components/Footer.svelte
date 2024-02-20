@@ -1,13 +1,19 @@
 <script>
     import Socials from "@components/Socials.svelte";
+
     export let text = "Goop Studios";
+    export let lang = "en";
     export let current_year = new Date().getFullYear();
 </script>
 
 <footer>
     <ul>
         <li> {text} &copy; <span class="first"> 2023 </span> - <span class="last"> {current_year} </span> </li>
+        {#if lang !== "sv" }
         <li> This website is <a href="https://github.com/goop-studios/www">open-source</a></li>
+        {:else}
+        <li> Denna webbplats är under <a href="https://github.com/goop-studios/www">öppen-källkod</a></li>
+        {/if}
         <li class="socials"> <Socials /> </li>
     </ul>
 </footer>

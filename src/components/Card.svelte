@@ -1,26 +1,53 @@
 <script>
     export let title;
     export let href = "";
+    export let role = "";
     export let body;
+    export let img = "";
 </script>
 
 <li>
     {#if href !== ""}
         <a href={href} target="_self">
-            <h2>
+            {#if img !== ""}
+                <div>
+                    <img src={img} alt={title} />
+                </div>
+            {/if}
+            <h1>
                 {title}
-            </h2>
+            </h1>
+            {#if role !== ""}
+            <p>
+                {role}
+            </p>
+            {/if}
+            {#if body !== ""}
             <p>
                 {body}
             </p>
+            {/if}
         </a>
     {:else}
-        <h2>
+        {#if img !== ""}
+            <div>
+                <img src={img} alt={title} />
+            </div>
+        {/if}
+        <h1>
             {title}
-        </h2>
+        </h1>
+        {#if role !== ""}
+        <p>
+            {role}
+        </p>
+        {/if}
+        {#if body !== ""}
         <p>
             {body}
         </p>
+        {/if}
+
     {/if}
 </li>
 
@@ -32,11 +59,17 @@
         a {
             @apply text-white;
         }
-        h2 {
-            @apply text-2xl font-sauce;
+        h1 {
+            @apply text-xl font-sauce flex text-center justify-center;
         }
         p {
-            @apply text-lg;
+            @apply text-lg text-center;
+        }
+        div {
+            @apply flex justify-center;
+        }
+        img {
+            @apply w-32 h-32 rounded-full;
         }
     }
 

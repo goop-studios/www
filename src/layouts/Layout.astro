@@ -1,8 +1,17 @@
 ---
 import Nav from "../components/Nav.svelte";
 const { title, lang = "en" } = Astro.props;
+const url = "https://goop-studios.monster";
 
+function setUrlroute(lang: string) {
+    return lang === "en" ? url : `${url}/${lang}`;
+}
 
+function setDescription(lang: string) {
+    return lang === "en"
+        ? "Goop Studios is developing a voxel-based, roguelike/soulslike RPG game. Join our community to contribute and be part of the game's development."
+        : "Goop Studios utvecklar ett voxel-baserat, roguelike/soulslike RPG spel. Gå med i vår community för att bidra och vara en del av spelets utveckling.";
+}
 ---
 
 <html lang={lang}>
@@ -10,6 +19,25 @@ const { title, lang = "en" } = Astro.props;
         <meta charset="UTF-8" />
         <title>Goop Studios - {title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="Goop Studios, Game, Voxel, Souls-like, Rogue-like, RPG, Open World, Community, Free, Open Source" />
+        <meta name="description" content={setDescription(lang)} />
+        <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+        <meta name="application-name" content="Goop Studios">
+        <meta name="apple-mobile-web-app-title" content="Goop Studios">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@goop_studios">
+        <meta name="twitter:creator" content="@goop_studios">
+        <meta name="twitter:title" content={`Goop Studios - ${title}`}>
+        <meta name="twitter:description" content={setDescription(lang)}>
+        <meta name="twitter:image" content="/assets/favicon_green.svg">
+        <meta name="title" content={`Goop Studios - ${title}`} />
+        <meta name="theme-color" content="#2af442">
+        <meta name="og:title" content={`Goop Studios - ${title}`}>
+        <meta name="og:description" content={setDescription(lang)}>
+        <meta name="og:image" content="/assets/favicon_green.svg">
+        <meta name="og:url" content={setUrlroute(lang)}>
         <link rel="icon" type="image/svg+xml" href="/assets/favicon_green.svg" />
     </head>
     <body>

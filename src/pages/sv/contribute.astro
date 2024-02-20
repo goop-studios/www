@@ -1,0 +1,16 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.svelte";
+
+const lang = "sv";
+---
+
+<Layout title="Bidra" slot="body" {lang}>
+  <header>
+    <h1>Bidra</h1>
+  </header>
+  <main>
+    <p>Bidra till projectet</p>
+  </main>
+  <Footer {lang} />
+</Layout>

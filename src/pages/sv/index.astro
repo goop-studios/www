@@ -5,9 +5,11 @@ import Footer 	from '@components/Footer.svelte'
 import Button 	from '@components/Button.svelte'
 import Card 	from '@components/Card.svelte'
 import GameLogo from '@components/GameLogo.svelte'
+
+const lang = "sv"
 ---
 
-<Layout title="Home" lang="sv">
+<Layout title="Hem" {lang} slot='body'>
 	<header>
 		<div class="blurry"></div>
 		<GameLogo />
@@ -23,12 +25,12 @@ import GameLogo from '@components/GameLogo.svelte'
 				<Card title="Vad är detta?" body="Det här är ett framtida voxelbaserat, roguelike/soulslike öppet världsspel som kommer att drivas av gemenskapen. Vilket då innebär att gemenskapen kommer att kunna bidra till spelet." />
 				<Card title="Varför?" body="Det här spelet började som ett projekt för vår entreprenörskapsklass på NTI Gymnasiet, Karlstad. Men på grund av brist på tid för att skapa en teknisk demo, beslutade vi att fokusera på att göra det till ett gemenskaps-baserat spel." />
 				<Card title="Hur kommer detta fungera?" body="Ideén är ganska enkel egentligen. Spelet kommer att vara gratis att kompilera/bygga, utan annonser och öppen källkod. Spelet kommer att drivas av gemenskapen, vilket innebär att gemenskapen kommer att kunna bidra till spelet. Vi har en Discord-server där vi kommer att diskutera status och vad spelet kommer att bli, bland oss själva och även med gemenskapen, vilket kommer att vara ett sätt att bidra till spelet. Men det finns en hake, när vi publicerar spelet på Steam och andra plattformar, för att få en gratis licens måste du ha bidragit till spelet på ett eller annat sätt. Men att bara ändra README-filen i repot eller ändra 1-2 rader som knappt gör någon förändring kommer inte att räcka för en licens. Godkännande för att få en licens beviljad kommer att granskas personligen av personalen på Goop Studios." />
-				<Card title="När började ni?" body="Vårat företag är rätt nytt då det grundades 2023 i augusti med hjälp av Ung Företagsamhet på entreprenörskapskursen vi tar, där vi har som uppgift att skapa ett spel för vårat företag." />
+				<Card title="När grundades företaget?" body="Vårat företag är rätt nytt då det grundades 2023 i augusti med hjälp av Ung Företagsamhet på entreprenörskapskursen vi tar, där vi har som uppgift att skapa ett spel för vårat företag." />
 				<Card title="Hur kan jag hjälpa till?" body="You can contribute to the page by going to the contribute page or by visiting our github, both buttons are above. You can also contribute to the game by joining our discord server and discussing the game with us." />
 			</ul>
 		</section>
 	</main>
-	<Footer />
+	<Footer {lang} />
 </Layout>
 
 
@@ -45,7 +47,7 @@ import GameLogo from '@components/GameLogo.svelte'
 		}
 	}
 	main {
-		@apply flex flex-col items-center justify-center gap-8 overflow-hidden;
+		@apply flex flex-col items-center justify-center;
 		section.about_section {
 			ul {
 				@apply flex flex-row flex-wrap justify-center gap-8;

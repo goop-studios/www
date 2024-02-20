@@ -10,17 +10,21 @@
 
     function localeToggle() {
         const currentLocale = checkForRouteInUrl();
-        return currentLocale === "en" ? "icon-[circle-flags--se]" : "icon-[circle-flags--uk]";
+        return currentLocale != "sv" ? "icon-[circle-flags--se]" : "icon-[circle-flags--uk]";
     }
 
     function localeRoute() {
+        const currentUrl = window.location.pathname;
         const currentLocale = checkForRouteInUrl();
-        return currentLocale === "en" ? "/sv" : "/";
+        const newLocale = currentLocale === "sv" ? "" : "sv";
+        const pageRoute = currentUrl.match(currentLocale === "sv" ? /\/sv\/(.+)/ : /\/(.+)/);
+        const route = pageRoute ? pageRoute[1] : '';
+        return newLocale === "" ? `/${route}` : `/${newLocale}/${route}`;
     }
 
     function language() {;
         const currentLocale = checkForRouteInUrl();
-        return currentLocale === "en" ? "Switch to Swedish" : "Byt till Engelska";
+        return currentLocale != "sv" ? "Switch to Swedish" : "Byt till Engelska";
     }
 
     function getRoute(field) {
@@ -38,11 +42,11 @@
 
     function checkForRouteInUrl() {
         const currentUrl = window.location.pathname;
-        return currentUrl === "/" ? "en" : "sv";
+        return currentUrl.startsWith("/sv") ? "sv" : "en";
     }
 
     function language_fields() {
-        return checkForRouteInUrl() === "en" ? ["About", "Contact"] : ["Om oss", "Kontakt"];
+        return checkForRouteInUrl() != "sv" ? ["About", "Contact"] : ["Om oss", "Kontakt"];
     }
 
     export let logo_text = "Goop Studios"
@@ -53,7 +57,7 @@
 <nav>
     <ul>
         <li>
-            <Logo text={logo_text} lang={checkForRouteInUrl()} />
+            <Logo lang={checkForRouteInUrl()} />
         </li>
         {#each fields as field}
             <li>

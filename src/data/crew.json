@@ -2,25 +2,21 @@
   {
     "name": "Odin Larsson",
     "role": "Goop Studios Founder, CEO and Game Designer",
-    "image": "https://via.placeholder.com/150",
-    "route": "/crew/nicedinos13"
+    "img": "/assets/crew/dini.webp"
   },
   {
     "name": "Sepand Sadraei Javahery",
     "role": "Music Producer",
-    "image": "https://via.placeholder.com/150",
-    "route": "/crew/intancote"
+    "img": "/assets/crew/intan.gif"
   },
   {
     "name": "Liam Sporny",
     "role": "Game Developer and Designer",
-    "image": "https://via.placeholder.com/150",
-    "route": "/crew/lom"
+    "img": "/assets/crew/gurg.webp"
   },
   {
     "name": "Oscar Sjödin Jansson",
     "role": "Game Developer, Webmaster and Administrator",
-    "image": "https://via.placeholder.com/150",
-    "route": "/crew/h4rl"
+    "img": "/assets/crew/me.webp"
   }
 ]

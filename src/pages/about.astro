@@ -1,0 +1,33 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Logo from "@components/Logo.svelte";
+import CrewDisplay from "@components/CrewDisplay.svelte";
+import Footer from "@components/Footer.svelte";
+---
+
+<Layout title="About" slot="body">
+    <header>
+        <Logo /> <h1> - About </h1>
+    </header>
+    <main>
+        <section class="intro">
+            <h1> Introduction </h1>
+            <p> Hello, and welcome to the about page! </p>
+        </section>
+        <section class="crew-containter">
+            <ul>
+                <CrewDisplay />
+            </ul>
+        </section>
+    </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+    header {
+        @apply flex flex-row gap-2 text-xl font-sauce justify-center items-center;
+    }
+    ul {
+        @apply flex flex-row gap-2 justify-center;
+    }
+</style>

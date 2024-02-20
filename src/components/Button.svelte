@@ -1,9 +1,10 @@
 <script>
     export let text = "Sample text";
     export let href = "/";
+    export let target = "_blank";
 </script>
 
-<a {href}> {text} </a>
+<a {href} {target}> {text} </a>
 
 <style lang="scss">
     a {

@@ -1,11 +1,19 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.svelte";
 import metadata from "@data/metadata.json";
+
+const lang = "sv"
 ---
 
-<Layout title="Contact">
-    <h1>Contact</h1>
+<Layout title="Kontakt" slot="body" {lang}>
+    <header>
+        <h1>Kontakt</h1>
+    </header>
+    <main>
         <p>
             Du kan kontakta oss via email hos: <a href=`mailto:${metadata.email}`>{ metadata.email }</a>.
         </p>
+    </main>
+    <Footer {lang} />
 </Layout>
