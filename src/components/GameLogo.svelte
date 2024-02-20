@@ -10,7 +10,7 @@
         @apply relative flex gap-2 transition-all;
     
         div {
-            @apply relative landscape:w-[32rem] portrait:w-64 h-fit;
+            @apply relative landscape:w-[32rem] portrait:w-80 h-fit;
             img {
                 @apply absolute;
                 @apply transition-opacity duration-300 ease-in-out;
