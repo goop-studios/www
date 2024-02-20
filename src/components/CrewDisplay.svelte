@@ -3,7 +3,7 @@
     import Card from "@components/Card.svelte";
 </script>
 
-{#each crew as person }
+{#each crew as person}
     <Card
         title={person.name}
         body={person.role}

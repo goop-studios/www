@@ -18,14 +18,14 @@
                 {title}
             </h1>
             {#if role !== ""}
-            <p>
-                {role}
-            </p>
+                <p>
+                    {role}
+                </p>
             {/if}
             {#if body !== ""}
-            <p>
-                {body}
-            </p>
+                <p>
+                    {body}
+                </p>
             {/if}
         </a>
     {:else}
@@ -38,14 +38,14 @@
             {title}
         </h1>
         {#if role !== ""}
-        <p>
-            {role}
-        </p>
+            <p>
+                {role}
+            </p>
         {/if}
         {#if body !== ""}
-        <p>
-            {body}
-        </p>
+            <p>
+                {body}
+            </p>
         {/if}
 
     {/if}

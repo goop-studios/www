@@ -1,16 +1,38 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Logo from "@components/Logo.svelte";
+import CrewDisplay from "@components/CrewDisplay.svelte";
 import Footer from "@components/Footer.svelte";
 
 const lang = "sv";
 ---
 <Layout {lang} title="Om oss" slot="body">
     <header>
-        <h1> <Logo /> </h1>
+        <Logo /> <h1> - Om oss </h1>
     </header>
     <main>
-        <p>Vi är ett gäng som gillar att bygga saker. Vi har byggt den här sidan för att vi tycker att det är kul. Vi hoppas att du tycker om den.</p>
+        <section class="intro">
+            <h1> Introduktion </h1>
+            <p> Vi är ett gäng som gillar att bygga saker. Vi har byggt den här sidan för att vi tycker att det är kul. Vi hoppas att du tycker om den. </p>
+        </section>
+        <section class="crew-container">
+            <ul>
+                <CrewDisplay />
+            </ul>
+        </section>
     </main>
     <Footer {lang} />
 </Layout>
+
+<style lang="scss">
+    header {
+        @apply flex flex-row gap-2 text-xl font-sauce justify-center items-center;
+    }
+    ul {
+        @apply flex flex-row gap-2 justify-center;
+    }
+
+    .intro {
+        @apply flex flex-col pb-1 items-center;
+    }
+</style>

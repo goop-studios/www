@@ -10,10 +10,6 @@ Currently using:
 - [SASS](https://sass-lang.com/)
 - [PostCSS](https://postcss.org/)
 
-
-
-
-
 All commands are run from the root of the project, from a terminal:
 
 | Command                    | Action                                           |
@@ -24,6 +20,5 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm run preview`         | Preview your build locally, before deploying     |
 | `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm run astro -- --help` | Get help using the Astro CLI                     |
-
 
 ![Goop Studios Logo](https://raw.githubusercontent.com/goop-studios/.github/main/resources/big_icon_green.png)
