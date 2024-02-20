@@ -41,23 +41,23 @@
     }
 
     ::-webkit-scrollbar {
-      @apply opacity-0;
-      @apply bg-transparent;
+        @apply opacity-0;
+        @apply bg-transparent;
     }
     ::-webkit-scrollbar-thumb {
-      @apply text-white rounded-xl;
+        @apply text-white rounded-xl;
     }
     ::-webkit-scrollbar-track {
-      @apply opacity-0;
+        @apply opacity-0;
     }
     ::-webkit-scrollbar-button {
-      @apply opacity-0;
+        @apply opacity-0;
     }
     ::-webkit-scrollbar-track-piece {
-      @apply opacity-0;
+        @apply opacity-0;
     }
     ::-webkit-scrollbar-corner {
-      @apply bg-transparent;
+        @apply bg-transparent;
     }
 
 </style>

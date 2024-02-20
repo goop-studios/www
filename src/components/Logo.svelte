@@ -15,7 +15,7 @@
 <style lang="scss">
     a {
         @apply relative text-white text-xl font-sauce flex gap-2 items-center transition-all whitespace-nowrap select-none;
-    
+
         div {
             @apply relative w-8 h-8;
             img {

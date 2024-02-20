@@ -35,7 +35,7 @@
             return field;
         }
     }
- 
+
     function checkForRouteInUrl() {
         const currentUrl = window.location.pathname;
         return currentUrl === "/" ? "en" : "sv";
@@ -55,7 +55,7 @@
         <li>
             <Logo text={logo_text} lang={checkForRouteInUrl()} />
         </li>
-         {#each fields as field}
+        {#each fields as field}
             <li>
                 <a href={`${getRelativeLocaleUrl(checkForRouteInUrl(), getRoute(field))}`}>{field}</a>
                 <!--{#if subfields[field]}
@@ -68,7 +68,7 @@
             </li>
         {/each}
         <li class="togglelocale">
-            <a title={language()} href={localeRoute()}><span class={localeToggle()}></span></a>
+            <a title={language()} href={localeRoute()} aria-label="toggleLang"><span class={localeToggle()}></span></a>
         </li>
         <li class="socials">
             <Socials />
