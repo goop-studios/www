@@ -13,11 +13,12 @@ const lang = "sv";
     <main>
         <section class="intro">
             <h1> Introduktion </h1>
-            <p> Vi är ett gäng som gillar att bygga saker. Vi har byggt den här sidan för att vi tycker att det är kul. Vi hoppas att du tycker om den. </p>
+            <p> Vi är ett gäng studenter på NTI Gymnasiet Karlstad som på impuls skapade ett eget spelutvecklingsföretag. Det startade när Odin (vår CEO och Grundare) tog entreprenörskapskursen, och vi såg att "Make A Game" evenemanget hos UF gav oss möjlighet att skapa ett spelutvecklingsföretag. Vilket är exakt vad vi gjorde. </p>
         </section>
         <section class="crew-container">
+            <h1> Möt teamet </h1>
             <ul>
-                <CrewDisplay />
+                <CrewDisplay lang="sv" />
             </ul>
         </section>
     </main>
@@ -28,11 +29,26 @@ const lang = "sv";
     header {
         @apply flex flex-row gap-2 text-xl font-sauce justify-center items-center;
     }
-    ul {
-        @apply flex flex-row gap-2 justify-center;
+    .crew-container {
+        @apply flex flex-col items-center justify-center gap-4;
+        ul {
+            @apply flex flex-row gap-8 justify-center flex-wrap w-1/2;
+        }
+        h1 {
+            @apply text-2xl underline decoration-goop-green underline-offset-4; 
+        }
     }
-
+    main {
+        @apply flex flex-col gap-4;
+    }
     .intro {
-        @apply flex flex-col pb-1 items-center;
+        @apply flex flex-col gap-4 items-center;
+        h1 {
+            @apply text-2xl underline decoration-goop-green underline-offset-4;  
+        }
+        p {
+            @apply w-1/2 inline;
+        }
     }
 </style>
+

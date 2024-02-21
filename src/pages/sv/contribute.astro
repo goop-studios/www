@@ -1,5 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Button from "@components/Button.svelte"
 import Footer from "@components/Footer.svelte";
 
 const lang = "sv";
@@ -7,10 +8,15 @@ const lang = "sv";
 
 <Layout title="Bidra" slot="body" {lang}>
     <header>
-        <h1>Bidra</h1>
+        <h1>Bidra till projektet!</h1>
     </header>
     <main>
-        <p>Bidra till projectet</p>
+        <section class="how"> 
+            <p>Du kan bidra</p>
+        </section>
+        <section class="buttons">
+          <Button href="r">
+        </section>
     </main>
     <Footer {lang} />
 </Layout>

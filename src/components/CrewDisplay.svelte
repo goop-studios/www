@@ -1,12 +1,15 @@
 <script>
     import crew from "@data/crew.json";
     import Card from "@components/Card.svelte";
+
+    export let lang = "en"; 
 </script>
 
-{#each crew as person}
+{#each crew[lang] as person}
     <Card
         title={person.name}
-        body={person.role}
+        role={person.role}
+        body={person.body}
         img={person.img}
     />
 {/each}

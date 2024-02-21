@@ -46,7 +46,7 @@
     }
 
     function language_fields() {
-        return checkForRouteInUrl() != "sv" ? ["About", "Contact"] : ["Om oss", "Kontakt"];
+        return checkForRouteInUrl() != "sv" ? ["About"] : ["Om oss"];
     }
 
     export let logo_text = "Goop Studios"

@@ -3,35 +3,52 @@ import Layout from "@layouts/Layout.astro";
 import Logo from "@components/Logo.svelte";
 import CrewDisplay from "@components/CrewDisplay.svelte";
 import Footer from "@components/Footer.svelte";
----
 
-<Layout title="About" slot="body">
+const lang = "en";
+---
+<Layout {lang} title="Om oss" slot="body">
     <header>
         <Logo /> <h1> - About </h1>
     </header>
     <main>
         <section class="intro">
             <h1> Introduction </h1>
-            <p> Hello, and welcome to the about page! </p>
+            <p> We are a group of students at NTI Gymnasiet Karlstad who, on a whim, created our own game development company. It all started when Odin (our CEO and Founder) took the entrepreneurship course, and we saw that the "Make A Game" event at UF gave us the opportunity to create a game development company. And that's exactly what we did. </p>
         </section>
-        <section class="crew-containter">
+        <section class="crew-container">
+            <h1> Meet the team</h1>
             <ul>
                 <CrewDisplay />
             </ul>
         </section>
     </main>
-    <Footer />
+    <Footer {lang} />
 </Layout>
 
 <style lang="scss">
     header {
         @apply flex flex-row gap-2 text-xl font-sauce justify-center items-center;
     }
-    ul {
-        @apply flex flex-row gap-2 justify-center;
+    .crew-container {
+        @apply flex flex-col items-center justify-center gap-4;
+        ul {
+            @apply flex flex-row gap-8 justify-center flex-wrap w-1/2;
+        }
+        h1 {
+            @apply text-2xl underline decoration-goop-green underline-offset-4; 
+        }
     }
-
+    main {
+        @apply flex flex-col gap-4;
+    }
     .intro {
-        @apply flex flex-col pb-1 items-center;
+        @apply flex flex-col gap-4 items-center;
+        h1 {
+            @apply text-2xl underline decoration-goop-green underline-offset-4;  
+        }
+        p {
+            @apply w-1/2 inline;
+        }
     }
 </style>
+

@@ -38,12 +38,12 @@
             {title}
         </h1>
         {#if role !== ""}
-            <p>
+            <p class="role">
                 {role}
             </p>
         {/if}
         {#if body !== ""}
-            <p>
+            <p class="body">
                 {body}
             </p>
         {/if}
@@ -62,8 +62,11 @@
         h1 {
             @apply text-xl font-sauce flex text-center justify-center;
         }
-        p {
+        p.role {
             @apply text-lg text-center;
+        }
+        p.body {
+            @apply text-base p-2; 
         }
         div {
             @apply flex justify-center;

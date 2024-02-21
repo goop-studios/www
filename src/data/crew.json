@@ -1,22 +1,54 @@
-[
-  {
-    "name": "Odin Larsson",
-    "role": "Goop Studios Founder, CEO and Game Designer",
-    "img": "/assets/crew/dini.webp"
-  },
-  {
-    "name": "Oscar Sjödin Jansson",
-    "role": "Game Developer, Webmaster and Administrator",
-    "img": "/assets/crew/me.webp"
-  },
-  {
-    "name": "Liam Sporny",
-    "role": "Game Developer and Designer",
-    "img": "/assets/crew/gurg.webp"
-  },
-  {
-    "name": "Sepand Sadraei Javahery",
-    "role": "Music Producer and Additional Help",
-    "img": "/assets/crew/intan.webp"
-  }
-]
+{
+  "en": [
+    {
+      "name": "Odin Larsson",
+      "role": "Goop Studios Founder, CEO and Game Designer",
+      "body": "True gamer viking with a passion and interest in game development and asset design.",
+      "img": "/assets/crew/dini.webp"
+    },
+    {
+      "name": "Oscar Sjödin Jansson",
+      "role": "Game Developer, Webmaster and Administrator",
+      "body": "Hobbyist program developer with a large passion for native software development, but dabbles also in webdev. Hopeful that this journey in game development will teach me a lot.",
+      "img": "/assets/crew/me.webp"
+    },
+    {
+      "name": "Liam Sporny",
+      "role": "Game Developer and Designer",
+      "body": "Gamer and passionate for computer technology, network and game development.",
+      "img": "/assets/crew/gurg.webp"
+    },
+    {
+      "name": "Sepand Sadraei Javahery",
+      "role": "Music Producer and Additional Help",
+      "body": "An Iranian guy born in Sweden, with a great passion for all things IT!",
+      "img": "/assets/crew/intan.webp"
+    }
+  ],
+  "sv": [
+    {
+      "name": "Odin Larsson",
+      "role": "Goop Studios Grundare, CEO och Speldesigner",
+      "body": "En äkta gamer viking med en passion och intresse i spelutveckling och design.",
+      "img": "/assets/crew/dini.webp"
+    },
+    {
+      "name": "Oscar Sjödin Jansson",
+      "role": "Spelutvecklare, Webmaster och Administrator",
+      "body": "Hobbyist mjukvaroutvecklare med en stor passion för native mjukvaroutveckling, men kör lite webbutveckling på sidan. Har mycket hopp att denna resa inom spelutvecklings branschen kommer att lära mig mycket.",
+      "img": "/assets/crew/me.webp"
+    },
+    {
+      "name": "Liam Sporny",
+      "role": "Spelutvecklare och Designer",
+      "body": "Gamer med en stor passion för datorteknik, nätverk och spelutveckling.",
+      "img": "/assets/crew/gurg.webp"
+    },
+    {
+      "name": "Sepand Sadraei Javahery",
+      "role": "Musikproducent och extra hjälp",
+      "body": "En Persisk kille som är född i Sverige, med en stor passion för allting inom IT!",
+      "img": "/assets/crew/intan.webp"
+    }
+  ]
+}
