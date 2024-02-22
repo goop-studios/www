@@ -6,17 +6,40 @@ import Footer from "@components/Footer.svelte";
 const lang = "sv";
 ---
 
-<Layout title="Bidra" slot="body" {lang}>
+<Layout {lang} title="Bidra">
     <header>
+        <div class="blurry"></div>
         <h1>Bidra till projektet!</h1>
-    </header>
-    <main>
-        <section class="how"> 
-            <p>Du kan bidra</p>
-        </section>
         <section class="buttons">
-          <Button href="r">
+            <Button custom="w-72 h-12" href="https://github.com/goop-studios/slimes-lament" text="Jobba med oss på spelet" />
+            <Button custom="w-72 h-12" href="https://patreon.com/GoopStudios" text="Sponsra oss på Patreon" />
+            <Button custom="w-72 h-12" href="https://discord.gg/TF4tGde7kh" text="Gå med i vår discord" />
         </section>
-    </main>
+    </header>
     <Footer {lang} />
 </Layout>
+
+<style lang="scss">
+    header {
+        @apply text-2xl text-center justify-center items-center flex flex-col gap-14 relative h-screen;
+        @apply bg-[url("/assets/teaserbg/pictura.webp")] bg-center;
+        h1 {
+            @apply z-40 font-sauce;
+            @apply underline decoration-goop-purple underline-offset-4;
+            @apply hover:decoration-goop-green;
+            @apply transition-decoration ease-in-out duration-300;
+        }
+        div.blurry {
+			@apply backdrop-blur-md absolute w-full h-full rounded-lg;
+		}
+        section.buttons {
+            @apply flex flex-row flex-wrap justify-center gap-8 z-40;
+        }
+    }
+    main {
+        @apply flex flex-col gap-8;
+        section.how {
+            @apply text-xl font-sauce text-center;
+        }
+    }
+</style>

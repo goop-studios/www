@@ -9,7 +9,7 @@ import GameLogo from '@components/GameLogo.svelte'
 const lang = "sv"
 ---
 
-<Layout title="Hem" {lang} slot='body'>
+<Layout title="Hem" {lang}>
 	<header>
 		<div class="blurry"></div>
 		<GameLogo />
@@ -38,7 +38,7 @@ const lang = "sv"
 	header {
 		@apply flex flex-col items-center justify-center gap-80 max-w-full z-0;
 		@apply py-40 relative;
-		@apply bg-[url('/assets/pictura.webp')] bg-center rounded-lg;
+		@apply bg-[url('/assets/teaserbg/pictura.webp')] bg-center rounded-lg;
 		section.contribute {
 			@apply flex flex-row items-center gap-8 relative justify-center flex-wrap;
 		}

@@ -1,7 +1,7 @@
 <a href="https://github.com/goop-studios/game" target="_blank">
     <div class="logo-container">
-        <img src="/assets/game_logo_green.svg" alt="Logo" class="logo-image" />
-        <img src="/assets/game_logo_purple.svg" alt="Logo" class="logo-image" />
+        <img src="/assets/game_logo/game_logo_green.svg" alt="Logo" class="logo-image" />
+        <img src="/assets/game_logo/game_logo_purple.svg" alt="Logo" class="logo-image" />
     </div>
 </a>
 

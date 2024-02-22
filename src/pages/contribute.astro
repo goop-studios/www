@@ -1,14 +1,43 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Button from "@components/Button.svelte"
 import Footer from "@components/Footer.svelte";
 ---
 
-<Layout title="Contribute" slot="body">
+<Layout title="Contribute">
     <header>
-        <h1>Contribute</h1>
+        <div class="blurry"></div>
+        <h1>Contribute to the project!</h1>
+        <section class="buttons">
+            <Button custom="w-72 h-12" href="https://github.com/goop-studios/slimes-lament" text="Work with us on the game!" />
+            <Button custom="w-72 h-12" href="https://patreon.com/GoopStudios" text="Sponsor us on Patreon!" />
+            <Button custom="w-72 h-12" href="https://discord.gg/TF4tGde7kh" text="Join our discord!" />
+        </section>
     </header>
-    <main>
-        <p>Contribute to the project</p>
-    </main>
     <Footer />
 </Layout>
+
+<style lang="scss">
+    header {
+        @apply text-2xl text-center justify-center items-center flex flex-col gap-14 relative h-screen;
+        @apply bg-[url("/assets/teaserbg/pictura.webp")] bg-center;
+        h1 {
+            @apply z-40 font-sauce px-4;
+            @apply underline decoration-goop-purple underline-offset-4;
+            @apply hover:decoration-goop-green;
+            @apply transition-decoration ease-in-out duration-300;
+        }
+        div.blurry {
+			@apply backdrop-blur-md absolute w-full h-full rounded-lg;
+		}
+        section.buttons {
+            @apply flex flex-row flex-wrap justify-center gap-8 z-40;
+        }
+    }
+    main {
+        @apply flex flex-col gap-8;
+        section.how {
+            @apply text-xl font-sauce text-center;
+        }
+    }
+</style>

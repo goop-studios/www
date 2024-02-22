@@ -6,7 +6,7 @@ import Footer from "@components/Footer.svelte";
 
 const lang = "sv";
 ---
-<Layout {lang} title="Om oss" slot="body">
+<Layout {lang} title="Om oss">
     <header>
         <Logo /> <h1> - Om oss </h1>
     </header>
@@ -27,27 +27,27 @@ const lang = "sv";
 
 <style lang="scss">
     header {
-        @apply flex flex-row gap-2 text-xl font-sauce justify-center items-center;
+        @apply flex flex-row gap-2 text-2xl font-sauce justify-center items-center py-24;
     }
     .crew-container {
         @apply flex flex-col items-center justify-center gap-4;
         ul {
-            @apply flex flex-row gap-8 justify-center flex-wrap w-1/2;
+            @apply flex flex-row gap-8 justify-center flex-wrap;
         }
         h1 {
-            @apply text-2xl underline decoration-goop-green underline-offset-4; 
+            @apply text-2xl underline decoration-goop-green font-sauce underline-offset-4;
         }
     }
     main {
-        @apply flex flex-col gap-4;
+        @apply flex flex-col gap-24;
     }
     .intro {
         @apply flex flex-col gap-4 items-center;
         h1 {
-            @apply text-2xl underline decoration-goop-green underline-offset-4;  
+            @apply text-2xl underline decoration-goop-green font-sauce underline-offset-4;
         }
         p {
-            @apply w-1/2 inline;
+            @apply landscape:w-1/2 px-4 text-lg;
         }
     }
 </style>

@@ -7,13 +7,13 @@ import Card 	from '@components/Card.svelte'
 import GameLogo from '@components/GameLogo.svelte'
 ---
 
-<Layout title="Home" slot="body">
+<Layout title="Home">
 	<header>
 		<div class="blurry"></div>
 		<GameLogo />
 		<section class="contribute">
 			<Button text="Contribute" href={getRelativeLocaleUrl("en", "contribute")} />
-			<Button text="View Source" href="https://github.com/goop-studios/game" />
+			<Button text="View Source" href="https://github.com/goop-studios/slimes-lament" />
 			<Button text="Discord" href="https://discord.gg/TF4tGde7kh" />
 		</section>
 	</header>
@@ -36,7 +36,7 @@ import GameLogo from '@components/GameLogo.svelte'
 	header {
 		@apply flex flex-col items-center justify-center gap-80 max-w-full z-0;
 		@apply py-40 relative;
-		@apply bg-[url('/assets/pictura.webp')] bg-center rounded-lg;
+		@apply bg-[url('/assets/teaserbg/pictura.webp')] bg-center rounded-lg;
 		section.contribute {
 			@apply flex flex-row items-center justify-center gap-8 relative flex-wrap;
 		}

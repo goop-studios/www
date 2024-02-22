@@ -5,7 +5,7 @@
 
     const routes = {
         "omoss": "about",
-        "kontakt": "contact"
+        "bidra": "contribute"
     }
 
     function localeToggle() {
@@ -46,7 +46,7 @@
     }
 
     function language_fields() {
-        return checkForRouteInUrl() != "sv" ? ["About"] : ["Om oss"];
+        return checkForRouteInUrl() != "sv" ? ["About", "Contribute"] : ["Om oss", "Bidra"];
     }
 
     export let logo_text = "Goop Studios"
@@ -57,7 +57,7 @@
 <nav>
     <ul>
         <li>
-            <Logo lang={checkForRouteInUrl()} />
+            <Logo lang={checkForRouteInUrl()} text={logo_text} />
         </li>
         {#each fields as field}
             <li>
@@ -106,6 +106,10 @@
             }
             .togglelocale {
                 @apply ml-auto;
+                span {
+                    @apply transition-outline outline-transparent hover:outline-goop-green outline-dotted duration-300 ease-in-out outline-2 outline-offset-2 rounded-full;
+
+                }
             }
             .socials {
                 @apply portrait:hidden;

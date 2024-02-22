@@ -40,6 +40,12 @@ export default {
         "goop-purple": "#e42af4",
         "goop-purple2": "#cd26dc",
       },
+      outlineColor: {
+        "goop-green": "#2af442",
+        "goop-green2": "#26dc3b",
+        "goop-purple": "#e42af4",
+        "goop-purple2": "#cd26dc",
+      },
       textDecorationColor: {
         "goop-green": "#2af442",
         "goop-green2": "#26dc3b",
@@ -50,6 +56,7 @@ export default {
       },
       transitionProperty: {
         "decoration": "text-decoration-color",
+        "outline": "outline-color",
       },
     },
   },

@@ -55,15 +55,18 @@
     li {
         @apply antialiased;
         @apply bg-gray-700 rounded-2xl p-4 list-none overflow-x-scroll;
-        @apply border border-white w-80 h-80;
+        @apply border border-white w-80 h-80 flex flex-col gap-2;
         a {
             @apply text-white;
         }
         h1 {
             @apply text-xl font-sauce flex text-center justify-center;
+            @apply underline decoration-goop-purple underline-offset-4;
+            @apply hover:decoration-goop-green;
+            @apply transition-decoration ease-in-out duration-300;
         }
         p.role {
-            @apply text-lg text-center;
+            @apply text-center m-0;
         }
         p.body {
             @apply text-base p-2; 
@@ -72,28 +75,27 @@
             @apply flex justify-center;
         }
         img {
-            @apply w-32 h-32 rounded-full;
+            @apply w-24 h-24 rounded-full;
         }
     }
 
     ::-webkit-scrollbar {
-        @apply opacity-0;
         @apply bg-transparent;
     }
     ::-webkit-scrollbar-thumb {
-        @apply text-white rounded-xl;
+        @apply bg-gray-400 hover:bg-gray-300 rounded-xl;
     }
     ::-webkit-scrollbar-track {
-        @apply opacity-0;
+        @apply bg-transparent;
     }
     ::-webkit-scrollbar-button {
-        @apply opacity-0;
+        @apply bg-transparent;
     }
     ::-webkit-scrollbar-track-piece {
-        @apply opacity-0;
+        @apply hidden;
     }
     ::-webkit-scrollbar-corner {
-        @apply bg-transparent;
+        @apply hidden;
     }
 
 </style>
