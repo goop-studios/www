@@ -9,6 +9,7 @@
 
 <footer>
     <ul>
+        <li class="socials"> <Socials /> </li>
         <li> {text} &copy; <span class="first"> 2023 </span> - <span class="last"> {current_year} </span> </li>
         {#if lang !== "sv" }
         <li> Contact: <a href={`mailto:${contact.email}`} target="_blank">{contact.email}</a></li>
@@ -17,7 +18,6 @@
         <li> Kontakt: <a href={`mailto:${contact.email}`} target="_blank">{contact.email}</a></li>
         <li> Denna webbplats är under <a href="https://github.com/goop-studios/www" target="_blank">öppen-källkod</a></li>
         {/if}
-        <li class="socials"> <Socials /> </li>
     </ul>
 </footer>
 
